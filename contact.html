@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+
+
+ <!-- -------script------ -->
+
+  <script src="https://example.com/fontawesome/v6.4.0/js/fontawesome.js" data-auto-replace-svg="nest"></script>
+  <script src="https://example.com/fontawesome/v6.4.0/js/solid.js"></script>
+  <script src="https://example.com/fontawesome/v6.4.0/js/brands.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b35de188cf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar sidebarGo">
+        
+        <nav>
+            <ul>
+                <li><a href="/">Home</a> </li>
+                <li><a href="/about.html">About Me</a></li>
+                <li><a href="/contact.html">contact Me</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <div class="hambar">
+            <i class="fa-solid fa-bars ham"></i>
+            <i class="fa-solid fa-xmark cross"></i>
+        </div>
+       <div class="contactform">
+          <div class="max-width">
+            <h2 class="title">Contact me</h2>
+            <div class="contact-content">
+                <div class="column-left">
+                    <div class="text">Get in Touch</div>
+                    <p class="inform">Please feel free to contact me at any point</p>
+                    <br/><br/>
+                    <div class="icons">
+                        <div class="row">
+                         <i class="fa-solid fa-user"></i>
+                                <div class="info">
+                                    <div class="head">Name</div>
+                                    <div class="sub-title">Bhagyasri</div>
+                                </div>
+                        </div>
+                      <br/>
+                        <div class="row">
+                            <br/>
+                            <i class="fas fa-map-marker-alt"></i>
+                                   <div class="info">
+                                       <div class="head">Address</div>
+                                       <div class="sub-title">Guntur,Andhrapradesh</div>
+                                   </div>
+                           </div>
+                      <br/>
+                        <div class="row">
+                            <i class="fa-solid fa-envelope"></i>
+                                   <div class="info">
+                                       <div class="head">Email</div>
+                                       <div class="sub-title">bhagyasribai0519@gmail.com</div>
+                                   </div>
+                           </div>
+
+                    </div>
+                </div>
+
+              <!-- ---------right------- -->
+              <div class="column-right">
+                        <div class="text-right"><i class="fa-solid fa-message msglogo"></i><span>  </span>Message me</div>
+                        <form name="submit-to-google-sheet">
+                                    <div class="files-name">
+                                        <i class="fa-solid fa-user"></i> <input type="text"  placeholder="Name" name="Name" class="field" required>
+                                    </div>
+                                    <div class="files-name">
+                                        <i class="fa-solid fa-envelope"></i><input type="text" placeholder="Email" name="email" class="field" required>
+                                    </div>
+                                    <div class="files-text">
+                                        <input type="text" placeholder="Subject" class="field">
+                                    </div>
+                                    <div class="field textarea">
+                                         <textarea name="message" placeholder="Your message..." id="" cols="30" rows="5" class="field"></textarea>
+                                    </div>
+                                    <div class="button">
+                                        <button type="submit" class="field fieldbtn">Send Message</button>
+                                    </div>
+                        </form>
+                        <span id="msg"></span>
+              </div>
+
+
+            </div>
+          </div>
+       </div>
+      
+       <div class="social-icons">
+        <h1 class="follow">Social Networks:</h1>
+       
+        <div class="icon"><a href="https://www.linkedin.com/feed/?trk=seo-authwall-base_google-one-tap-submit"><i class="fa-brands fa-linkedin"></i></a></div>
+        <div class="icon"><a href="https://github.com/Bhagyasribhagi"><i class="fa-brands fa-github"></i></a></div>
+        <div class="icon"><a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a></div>
+       </div>
+       
+
+      
+            
+    </div>
+   
+</div>
+<script src="script.js"></script>
+
+<!-- -----sheet---- -->
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxaFi598OcunYmqPadriuYunPF9p3cwtMytTiOjUyrk3OzYlGFyPWfU_0A5lRBDYuVe/exec'
+    const form = document.forms['submit-to-google-sheet']
+   const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

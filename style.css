@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+   
+    background: radial-gradient(rgb(217, 84, 210),rgb(235, 198, 152));
+    
+    width: 300px;
+    font-family: "roboto";
+    height: 120vh;
+    transition: transform 0.3s ease;
+   
+}
+.button2{
+    background-color: #ffbf00;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.button3{
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    border-color: blueviolet;
+}
+
+
+.sidebar nav {
+    padding: 30px;
+}
+
+.sidebar nav li {
+    
+    list-style: none;
+    font-size: 20px;
+    padding: 33px 0;
+}
+
+.sidebar nav li a {
+    color: black;
+    text-decoration: none;
+    font-family: "roboto";
+    font-weight: bold;
+}
+
+/* ------nav----- */
+
+.sidebar nav  li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background:blue;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+nav {
+    display: block;
+}
+/* ---------------==----- */
+
+.main {
+    /* background-color: yellow; */
+    width: 100vw;
+   
+}
+
+.container {
+    display: flex;
+     background: radial-gradient(#f603d1d3,#1dc0cf);
+    /* background: #9de4eb; */
+}
+
+.infocontainer {
+    /* background-color:pink; */
+    height: 60vh;
+    width: 70vw;
+    margin: 140px auto;
+    justify-content: space-around;
+    display: flex;
+}
+
+.devinfo {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "roboto";
+}
+
+.devpic img {
+    height: 55vh;
+    border-radius: 60px;
+
+}
+
+@media screen and (max-width:768px){
+    .devpic img {
+        height: 40vh;
+        width: 30vw;
+        border-radius: 50px;
+    
+    }
+   .moreabout{
+    font-size: 15px;
+   }
+   .hello{
+    font-size: 20px;
+   }
+
+}
+@media screen and (max-width:375px){
+    .devpic img {
+       display: none;
+    
+    }
+}
+
+
+.moreabout {
+    font-size: 20px;
+    font-family: "roboto";
+    margin-top: 26px;
+    font-style: italic;
+
+}
+
+.hello {
+    font-size: 50px;
+    font-style: normal;
+}
+
+.name {
+    font-size: 55px;
+    font-weight: bold;
+    font-family:"roboto";
+    font-style:initial;
+    color: #f00271;
+}
+
+.guntur {
+    font-size: 25px;
+}
+
+.buttons {
+    margin-top: 34px;
+}
+
+.buttons button {
+    padding: 9px 14px;
+    border-radius: 22px;
+    color: white;
+    background-color:  #f00271;
+    ;
+    font-weight: bold;
+    font-size: 21px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    color: dodgerblue;
+    background-color:#1dc0cf ;
+}
+.container.sidebar nav  ul li a:hover{
+   color: dodgerblue;
+   background-color: palevioletred;
+}
+
+.hambar{
+      position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
+.ham{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.sidebarGo{
+        transform: translate(-443px,0px);
+        position: absolute;
+    }
+.cross{
+    margin-left: 155px;
+    font-size: 30px;
+}
+
+@media  (max-width: 1615px){
+    .devinfo{
+        font-size: 10px;
+    }
+    .buttons{
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    
+   
+}
+.main {
+    padding: 80px;
+    margin: 50px;
+    height: 100vh;
+   
+}
+.title{
+    text-align: center
+
+}
+
+p {
+    padding-top: 20px;
+}
+.contact-content {
+    /* width: 30vw; */
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.info{
+    margin-left: 30px;
+    align-items: center;
+}
+.icons .row i{
+    color: rgb(46, 43, 8);
+    font-size: 25px;
+}
+.icons .row .head{
+    font-weight: bold;
+    color: #0e0502;
+}
+.column .left{
+    display: flex;
+    flex-direction: row;
+}
+.text-right{
+    color: white;
+    text-align: left;
+}
+.msglogo{
+    color:rgb(246, 246, 13);
+   
+}
+.column-right{
+    padding: 10px;
+    color: black;
+    font-family: sans-serif;
+}
+.column-right .text-right{
+    font-weight: bold;
+}
+.field{
+    margin: 5px;  
+  border-radius: 10px;
+    padding: 10px;
+}
+.fieldbtn:hover{
+    background-color:dodgerblue;
+    font-weight: bold;
+    cursor: pointer;
+    color: none;
+   
+    
+}
+.text{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "roboto";
+    color: white;
+}
+.inform{
+    font-size: 17px;
+    font-family: "roboto";
+    font-style: inherit;
+}
+
+
+
+.social-icons.icon{
+    background-color: black;
+
+}
+.social-icons{
+    display: flex;
+    flex-direction: row;
+   padding: 20px;
+}
+.icon{
+    padding: 10px;
+    font-size: 30px;
+   
+   
+}
+.icon i{
+   
+    color: white;
+   
+}
+.follow{
+    color:black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+/* ---------------about me----------- */
+
+
+.about{
+    padding: 20px;
+    margin: 10px;
+   
+    
+}
+
+.header{
+    font-weight: bold;
+    padding-top: 50px;
+    text-decoration: underline;
+    font-size: 40px;
+    color:black;
+    margin-bottom: 20px;
+    font-family: "roboto";
+}
+.bio{
+    font-size: 20px;
+    color:black;
+    font-family: "sans serif";
+    font-weight:500;
+}
+.about-container{
+    background-color: black;
+    padding: 50px;
+}
+span{
+    color: red;
+    font-weight: bold;
+    font-family: 'Fire Sans', sans-serif;
+}
+
+
+/* --------education----- */
+.heading{
+    padding-top: 50px ;
+}
+.education-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.logo{
+    font-size: 60px;
+    
+}
+.education-list div{
+    background-color:rgb(230, 129, 203);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 20px;
+    color: crimson;
+}
+.education-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.education-list div .course{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.education-list div .clg-name{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.education-list div .prc{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #ffbf00;
+}
+.education-list div .year{
+    font-size: 25px;
+    font-weight: bold;
+}
+.education-list div:hover{
+    background-color: rgb(68, 154, 223);
+    transform: translateY(-10px);
+    color: rgb(9, 0, 7);
+}
+
+
+/* ------------skills--------- */
+.tab-titles{
+   display: flex;
+   margin: 40px 0 0px; 
+  
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    color: white;
+}
+.tab-links::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background:red ;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5px;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 0px,0;
+    font-family: "roboto";
+    font-style:inherit;
+}
+.tab-contents ul li span{
+    color: brown;
+    font-size: 14px;
+}
+.tab-contents ul h2{
+    margin-bottom: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #b4ea12;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.activity{
+    margin-bottom: 10px;
+}
+
+/* -----------my work---------- */
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow:hidden ;
+    text-align: center;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s; 
+}
+.work-img{
+    height: 30vh;
+    width: 30vw;
+   
+}
+@media  screen and (max-width:768px) {
+    .work-img{
+        height: 15vh;
+        width: 15vw;
+        padding-right: 10px;
+    }
+}
+.work-name{
+    
+    font-style:oblique;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ffbf00);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    transition: height 0.5s;
+
+}
+.work-name h2{
+    font-weight: 500;
+    margin-bottom: 20px;
+   
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .work-name{
+    height: 100%;
+} 
+
+  /* -----copyright----- */
+
+  .copyright{
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(198, 15, 161);
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 50px;
+
+  }
+  .copyright i{
+    color: pink;
+  }
+
+  #msg{
+    font-size: 15px;
+    font-weight: bold;
+    color: green;
+  }
+
+
+  @media screen and (max-width:768px) {
+    .main{
+        padding: 10px;
+        font-size: 15px;
+        height: 150vh;
+    }
+    .edu-card{
+        font-size: 15px;
+    }
+    .contactform{
+        padding: 20px;
+    }
+    .contact-content{
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .hello.name{
+        font-size: 15px;
+    }
+    
+  }
+
+  @media screen and (max-width:768px){
+    .container{
+        height: 200vh;
+        width: 100vw;
+    }
+  }

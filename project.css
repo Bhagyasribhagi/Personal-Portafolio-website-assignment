@@ -1,0 +1,51 @@
+.bg-con{
+    background-color: antiquewhite;
+    text-align: center;
+}
+.project-data{
+    padding: 5px;
+    background-color: aqua;
+}
+.Projects{
+    text-align: center;
+}
+.project-container{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    border-radius: 10px;
+    justify-content: space-around;
+}
+
+.project-list{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.img{
+    height: 30vh;
+    width: 30vw;
+}
+.head{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: underline;
+    color: brown;
+}
+.name{
+    font-size: 30px;
+
+}
+.msg{
+    color: grey;
+    font-size: 15px;
+}
+.icon{
+    margin: 20px;
+    font-size: 20px;
+}
+.mail{
+    margin-top: 20px;
+}
